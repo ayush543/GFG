@@ -1,0 +1,20 @@
+n=int(input())
+for _ in range(n):
+    m=int(input())
+    a=[int(i) for i in input().split()]
+    b=[int(i) for i in input().split()]
+    high=0
+    l=10000
+    for i in range(m):
+        s1=0
+        s2=0
+        for k in range(i,m,1):
+            s1+=a[k]
+            s2+=b[k]
+            
+            if s1==s2:
+                l=k-i+1
+                if l>high:
+                    high=l
+                    
+    print(high)
